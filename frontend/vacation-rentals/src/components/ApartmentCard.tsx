@@ -10,6 +10,7 @@ interface ApartmentCardProps {
   onDelete?: () => void;
   onPay?: () => void;
   isPaid?: boolean;
+  isPaymentLoading?: boolean;
 }
 
 const ApartmentCard: React.FC<ApartmentCardProps> = ({
@@ -20,6 +21,7 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
   onDelete,
   onPay,
   isPaid = true,
+  isPaymentLoading = false,
 }) => {
   const defaultImage = 'https://via.placeholder.com/300x200?text=דירת+נופש';
 
@@ -58,8 +60,12 @@ const ApartmentCard: React.FC<ApartmentCardProps> = ({
         {showActions && (
           <div className="apartment-actions" onClick={(e) => e.stopPropagation()}>
             {!isPaid && onPay && (
-              <button onClick={onPay} className="action-btn pay-btn">
-                שלם ₪10
+              <button 
+                onClick={onPay} 
+                className="action-btn pay-btn"
+                disabled={isPaymentLoading}
+              >
+                {isPaymentLoading ? 'מעבד...' : 'שלם ₪10'}
               </button>
             )}
             {onEdit && (

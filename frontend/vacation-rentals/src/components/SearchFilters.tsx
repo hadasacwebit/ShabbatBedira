@@ -20,7 +20,7 @@ const SearchFilters: React.FC<SearchFiltersProps> = ({
   };
 
   const handleReset = () => {
-    onFilterChange({ page: 1, pageSize: 10 });
+    onFilterChange({ page: 1, pageSize: filters.pageSize || 12 });
   };
 
   return (

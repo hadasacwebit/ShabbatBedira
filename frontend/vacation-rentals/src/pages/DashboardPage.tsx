@@ -10,8 +10,7 @@ const DashboardPage: React.FC = () => {
   const [apartments, setApartments] = useState<Apartment[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  // Track which apartment is being paid for (used for loading state)
-  const [, setPaymentLoading] = useState<number | null>(null);
+  const [paymentLoading, setPaymentLoading] = useState<number | null>(null);
   
   const { user } = useAuth();
   const navigate = useNavigate();
@@ -142,6 +141,7 @@ const DashboardPage: React.FC = () => {
                       apartment={apartment}
                       showActions
                       isPaid={false}
+                      isPaymentLoading={paymentLoading === apartment.id}
                       onEdit={() => handleEdit(apartment)}
                       onDelete={() => handleDelete(apartment)}
                       onPay={() => handlePay(apartment)}
