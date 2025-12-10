@@ -1,0 +1,145 @@
+.apartment-card {
+  background: white;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, box-shadow 0.2s;
+  cursor: pointer;
+  direction: rtl;
+}
+
+.apartment-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.apartment-image-container {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.apartment-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.payment-badge,
+.inactive-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.payment-badge {
+  background-color: #f59e0b;
+  color: white;
+}
+
+.inactive-badge {
+  background-color: #6b7280;
+  color: white;
+}
+
+.apartment-content {
+  padding: 1rem;
+}
+
+.apartment-title {
+  margin: 0 0 0.5rem 0;
+  font-size: 1.2rem;
+  color: #1f2937;
+}
+
+.apartment-city {
+  margin: 0 0 0.25rem 0;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+.apartment-address {
+  margin: 0 0 0.75rem 0;
+  color: #6b7280;
+  font-size: 0.9rem;
+}
+
+.apartment-details {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.detail {
+  font-size: 0.9rem;
+  color: #4b5563;
+}
+
+.apartment-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.apartment-price {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #059669;
+}
+
+.apartment-phone {
+  font-size: 0.9rem;
+  color: #6b7280;
+}
+
+.apartment-actions {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid #e5e7eb;
+}
+
+.action-btn {
+  flex: 1;
+  padding: 0.5rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.pay-btn {
+  background-color: #22c55e;
+  color: white;
+}
+
+.pay-btn:hover {
+  background-color: #16a34a;
+}
+
+.edit-btn {
+  background-color: #2563eb;
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #1d4ed8;
+}
+
+.delete-btn {
+  background-color: #ef4444;
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #dc2626;
+}

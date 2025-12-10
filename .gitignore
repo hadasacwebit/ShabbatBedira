@@ -1,0 +1,51 @@
+# .NET
+*.dll
+*.exe
+*.pdb
+*.user
+*.suo
+*.cache
+*.vspscc
+*.vssscc
+*.pidb
+*.obj
+*.log
+bin/
+obj/
+.vs/
+.vscode/
+
+# Node
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build outputs
+build/
+dist/
+out/
+
+# Environment files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# IDE
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Test coverage
+coverage/
+
+# Misc
+*.log
+logs/
